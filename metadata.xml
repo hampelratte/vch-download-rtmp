@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iPOJO>
+	<instance component="de.berlios.vch.download.rtmp.RtmpDownloadFactory" name="vch.download.rtmp.factory" />
+    <instance component="de.berlios.vch.download.rtmp.RTMP" name="vch.download.rtmp" />
+    <instance component="de.berlios.vch.download.rtmp.StreamBridge" name="vch.download.rtmp.streambridge" />
+</iPOJO>
