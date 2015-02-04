@@ -4,7 +4,7 @@
     <artifactId>download.rtmp</artifactId>
     <packaging>bundle</packaging>
     <name>VCH RTMP Download Support</name>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
     <description>Adds RTMP support for the download manager
     </description>
 
