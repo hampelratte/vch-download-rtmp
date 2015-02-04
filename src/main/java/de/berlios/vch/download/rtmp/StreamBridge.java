@@ -26,8 +26,9 @@ import de.berlios.vch.web.servlets.VchHttpServlet;
 
 @Component
 public class StreamBridge extends VchHttpServlet {
+	private static final long serialVersionUID = 1L;
 
-    public static final String PATH = "/stream/rtmp";
+	public static final String PATH = "/stream/rtmp";
 
     @Requires
     private LogService logger;
