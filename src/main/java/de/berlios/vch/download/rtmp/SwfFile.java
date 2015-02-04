@@ -92,12 +92,19 @@ public class SwfFile {
         out.close();
         
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        FileInputStream fin = new FileInputStream(outFile);
-        byte[] b = new byte[1024];
-        int length = -1;
-        while( (length = fin.read(b)) >= 0 ) {
-            bos.write(b, 0, length);
-        }
+        FileInputStream fin = null;
+        try {
+			fin = new FileInputStream(outFile);
+			byte[] b = new byte[1024];
+			int length = -1;
+			while( (length = fin.read(b)) >= 0 ) {
+			    bos.write(b, 0, length);
+			}
+		} finally {
+			if(fin != null) {
+				fin.close();
+			}
+		}
         
         System.out.println("Digest: " + hmacSha256("Genuine Adobe Flash Player 001", bos.toByteArray()));
     }
